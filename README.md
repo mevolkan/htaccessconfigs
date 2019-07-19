@@ -8,3 +8,7 @@ This are .htaccess configs for Apache based servers, haven't really worked with 
 [a link](http://zemalf.com/1076/blog-htaccess-rules/)
 
 [a link](https://perishablepress.com/stupid-htaccess-tricks/)
+
+#NB
+This settings are not set to work out of the box
+Disable or enable one by one when deploying, incase you break your site
