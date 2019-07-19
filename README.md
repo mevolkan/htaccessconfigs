@@ -2,7 +2,7 @@
 
 This are .htaccess configs for Apache based servers, haven't really worked with Nginx yet, will update when I interact with them
 
-#More Reading
+# More Reading
 
 [https://www.askapache.com/htaccess/](https://www.askapache.com/htaccess/)
 
@@ -10,7 +10,7 @@ This are .htaccess configs for Apache based servers, haven't really worked with 
 
 [https://perishablepress.com/stupid-htaccess-tricks/](https://perishablepress.com/stupid-htaccess-tricks/)
 
-#NB
+# NB
 This settings are not set to work out of the box
 
 Disable or enable one by one when deploying, incase you break your site
