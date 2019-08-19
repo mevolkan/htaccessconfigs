@@ -19,7 +19,14 @@ Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
 #disable directory indexing
 Options -Indexes
 
+#Security Headers – X-XSS-Protection
+Header set X-XSS-Protection "1; mode=block"
 
+#Security Headers – X-Content-Type: nosniff
+Header set X-Content-Type-Options nosniff
+
+#Strict-Transport-Security security header
+Strict-Transport-Security: max-age=31536000;
 
 <IfModule mod_headers.c>
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
