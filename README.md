@@ -11,8 +11,8 @@ This are .htaccess configs for Apache based servers, haven't really worked with 
 [https://perishablepress.com/stupid-htaccess-tricks/](https://perishablepress.com/stupid-htaccess-tricks/)
 
 # NB
-This settings are not set to work out of the box
-
-Disable or enable one by one when deploying, incase you break your site
-
+This settings are not set to work out of the box, customise to what seems fit
+Disable or enable one by one when deploying, incase you break your site. This is after backing up your previous configs
 Tweak and tune to your desire, happy hacking
+
+As a performance precaution, Expires/ Cache Control Headers directives are not to be used together with Etags, use what suits you better
