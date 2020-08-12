@@ -6,15 +6,16 @@ Header always set X-FRAME-OPTIONS "DENY"
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-
-<IfModule mod_headers.c>
-  Header set Content-Security-Policy "script-src 'self' https://www.domain.com; base-uri 'self';"
-</IfModule>
+#or
 
 <IfModule mod_headers.c>
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
 </IfModule>
+
+<IfModule mod_headers.c>
+  Content-Security-Policy default-src ‘self’; script-src https://trustedorigin.net/script.js;
+</IfModule>
+
 
 #disable directory indexing
 Options -Indexes
