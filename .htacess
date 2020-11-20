@@ -20,6 +20,11 @@ Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
 #disable directory indexing
 Options -Indexes
 
+# disable xmlrpc
+<FilesMatch "^xmlrpc\.php$">
+  Require all denied
+</FilesMatch>
+
 #Security Headers – X-XSS-Protection
 Header set X-XSS-Protection "1; mode=block"
 
