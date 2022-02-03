@@ -10,6 +10,22 @@ This are .htaccess configs for Apache based servers, haven't really worked with 
 
 [https://perishablepress.com/stupid-htaccess-tricks/](https://perishablepress.com/stupid-htaccess-tricks/)
 
+## Tools
+here are tools 
+
+# to generate CSP headers
+[https://csper.io/generator](casper.io)
+[https://report-uri.com/home/generate] (report-uri.com)
+
+# Here is how you can test
+[https://observatory.mozilla.org/analyze/](Mozilla)
+[https://securityheaders.com/](https://securityheaders.com/)
+
+# Test and submit your website for HSTS
+[https://hstspreload.org/](https://hstspreload.org/)
+
+
+
 # NB
 This settings are not set to work out of the box, customise to what seems fit
 Disable or enable one by one when deploying, incase you break your site. This is after backing up your previous configs
