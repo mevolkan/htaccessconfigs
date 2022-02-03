@@ -25,7 +25,19 @@ Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
   Content-Security-Policy default-src ‘self’; script-src https://trustedorigin.net/script.js;
 </IfModule>
 
+# X-Content-Type-Options
+Header set X-Content-Type-Options "nosniff"
 
+# Security Headers – X-XSS-Protection
+Header set X-XSS-Protection "1; mode=block"
+
+# Security Headers – X-Content-Type: nosniff
+Header set X-Content-Type-Options nosniff
+
+# Security Headers  X-Frame-Options Only allow my site to frame itself
+Content-Security-Policy: frame-ancestors 'self'
+X-Frame-Options: SAMEORIGIN
+  
 # Disable directory indexing
 Options -Indexes
 
@@ -73,20 +85,8 @@ AddDefaultCharset utf-8
 		Header unset X-UA-Compatible
 	</FilesMatch>
 
-	# | Reflected Cross-Site Scripting (XSS) attacks         
-	Header set X-XSS-Protection "1; mode=block"
 
-	# `mod_headers` cannot match based on the content-type, however,
-	# the `X-XSS-Protection` response header should be sent only for
-	# HTML documents and not for the other resources.
 
-     <FilesMatch "\.(appcache|atom|bbaw|bmp|br|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|gz|htc|ic[os]|jpe?g|m?js|json(ld)?|m4[av]|manifest|map|markdown|md|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|wasm|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
-         Header unset X-XSS-Protection
-     </FilesMatch>
-
-	Header always set X-Frame-Options "SAMEORIGIN"
-	Header append X-FRAME-OPTIONS "SAMEORIGIN"
-	Header set X-Content-Type-Options "nosniff"
 	Header unset X-Powered-By
 	Header always unset X-Powered-By
 	Header unset ETag
@@ -99,11 +99,6 @@ AddDefaultCharset utf-8
     </FilesMatch>
 </IfModule>
 
-# Security Headers – X-XSS-Protection
-Header set X-XSS-Protection "1; mode=block"
-
-# Security Headers – X-Content-Type: nosniff
-Header set X-Content-Type-Options nosniff
 
 # Anti CSRF
 RewriteEngine on
