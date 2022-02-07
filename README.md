@@ -10,7 +10,7 @@ here are tools
 - [https://report-uri.com/home/generate](report-uri.com)
 
 ### Here is how you can test
-- [https://observatory.mozilla.org/analyze/](Mozilla)
+- [https://observatory.mozilla.org/](https://observatory.mozilla.org/)
 - [https://securityheaders.com/](https://securityheaders.com/)
 
 ### Test and submit your website for HSTS
