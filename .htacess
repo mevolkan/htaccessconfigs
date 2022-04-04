@@ -31,9 +31,6 @@ Header set X-Content-Type-Options "nosniff"
 # Security Headers – X-XSS-Protection
 Header set X-XSS-Protection "1; mode=block"
 
-# Security Headers – X-Content-Type: nosniff
-Header set X-Content-Type-Options nosniff
-
 # Security Headers  X-Frame-Options Only allow my site to frame itself
 Content-Security-Policy: frame-ancestors 'self'
 X-Frame-Options: SAMEORIGIN
