@@ -35,9 +35,6 @@ Header set X-XSS-Protection "1; mode=block"
 Content-Security-Policy: frame-ancestors 'self'
 X-Frame-Options: SAMEORIGIN
   
-# Disable directory indexing
-Options -Indexes
-
 # Disable xmlrpc for wordpress
 <FilesMatch "^xmlrpc\.php$">
   Require all denied
@@ -46,6 +43,9 @@ Options -Indexes
 
 # | File access                                                        |
 # ----------------------------------------------------------------------
+
+# Disable directory indexing
+
 <IfModule mod_autoindex.c>
     Options -Indexes
 </IfModule>
