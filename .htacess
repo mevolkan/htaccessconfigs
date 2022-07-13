@@ -8,8 +8,6 @@ Header always set X-FRAME-OPTIONS "DENY"
 # Force https
 
 RewriteEngine On
-RewriteCond %{ENV:HTTPS} !on [NC]
-RewriteRule ^(.*)$ https://www.example.com/$1 [R,L]
 
 RewriteCond %{ENV:HTTPS} on [NC]
 RewriteCond %{HTTP_HOST} ^example\.com$ [NC]
